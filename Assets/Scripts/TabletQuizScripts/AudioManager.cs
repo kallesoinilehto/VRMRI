@@ -12,11 +12,14 @@ public class AudioManager : MonoBehaviour
 
     public void AnswerBegin()
     {
+        Debug.Log("Button clicked");
         HandleAnswer(true);
+        Debug.Log("After HandleAnswer");
     }
 
     private void HandleAnswer(bool playerAnswer)
     {
         audioSource.PlayOneShot(clickSound);
+        Debug.Log("Sound effect played");
     }
 }
