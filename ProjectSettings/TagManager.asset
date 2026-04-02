@@ -29,6 +29,8 @@ TagManager:
   - stickerPass
   - sticker
   - passReference
+  - FallZone
+  - Floor
   layers:
   - Default
   - TransparentFX

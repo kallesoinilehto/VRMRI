@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 9104045509732885333}
   - component: {fileID: 8073768255783301267}
   - component: {fileID: 731304994635202782}
+  - component: {fileID: -255222861279597789}
   m_Layer: 0
   m_Name: tablet
   m_TagString: Untagged
@@ -446,8 +447,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.50101185, y: 0.019813418, z: 0.6064311}
-  m_Center: {x: 0.14680001, y: 0.142575, z: 0.34950924}
+  m_Size: {x: 0.50101185, y: 0.01977913, z: 0.6121689}
+  m_Center: {x: 0.14680001, y: -0.0072695315, z: -0.107965365}
 --- !u!54 &9104045509732885333
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -650,6 +651,18 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &-255222861279597789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781924719825216928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1686be315676b4284f9cf8db3f6472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3881331615651819978
 GameObject:
   m_ObjectHideFlags: 0
