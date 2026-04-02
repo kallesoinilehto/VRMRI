@@ -9,6 +9,7 @@ public class TeleportMRI3 : MonoBehaviour
     // This function will be called when the button is clicked
     public void TeleportToScene()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        //SceneManager.LoadScene(sceneToLoad);
+        GameObject.FindGameObjectWithTag("passReference").GetComponent<ReferencePass>().GetPass().SetActive(true);
     }
 }

@@ -25,6 +25,7 @@ public class SummonStickerPass : MonoBehaviour
      
     }
 
+    //turns off the pass when a new scene starts, also sets a new camera to follow.
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         mainCamera = Camera.main.transform;
@@ -36,6 +37,7 @@ public class SummonStickerPass : MonoBehaviour
         //do later: add sound to summoning the pass
     }
 
+    //this controls the movement of the sticker pass. it follows your camera and always stays in front.
     void LateUpdate()
     {
         Vector3 targetPosition = mainCamera.position + mainCamera.TransformDirection(offset);
@@ -48,6 +50,7 @@ public class SummonStickerPass : MonoBehaviour
             transform.rotation, targetRotation, rotationSmoothSpeed * Time.deltaTime);
     }
 
+    //activates when a new scene is loaded.
     void Update()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
