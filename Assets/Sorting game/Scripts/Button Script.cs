@@ -11,8 +11,7 @@ public class Buttonscript : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            //SceneManager.LoadScene(nextSceneName);
-            GameObject.FindGameObjectWithTag("passReference").GetComponent<ReferencePass>().GetPass().SetActive(true);
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
