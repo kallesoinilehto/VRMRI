@@ -20130,6 +20130,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 548230915}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Quiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873892018310084388, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8147530528080447246, guid: e87c54d30d9bc384c9f9a9fc67343ffa,
         type: 3}
       propertyPath: m_LocalScale.x
