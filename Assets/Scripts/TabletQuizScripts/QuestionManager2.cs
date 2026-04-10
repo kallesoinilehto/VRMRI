@@ -34,7 +34,7 @@ public class QuestionManager2 : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float answerDelay = 1f;
     [SerializeField] private int countdownSeconds = 10;
-    [SerializeField] private string returnSceneName = "HubAreaScene";
+    [SerializeField] private string returnSceneName = "Lobby";
 
     private int currentQuestionIndex = 0;
     private int score = 0;
