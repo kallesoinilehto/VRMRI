@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0b02edc38d95801458ad5308948d7d62
+=======
+guid: 480fe1768f1c54050a5f27f7db6e2580
+>>>>>>> upstream/mac_b
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
