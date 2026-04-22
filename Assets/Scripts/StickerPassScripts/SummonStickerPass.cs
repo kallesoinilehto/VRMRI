@@ -13,6 +13,8 @@ public class SummonStickerPass : MonoBehaviour
     public float rotationSmoothSpeed = 8f;
     private Vector3 velocity;
     private bool firsttime = false;
+    public Vector3 holderoffset = new Vector3(0,0,0);
+    public Quaternion holderrotation = new Quaternion(0, 0, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,10 @@ public class SummonStickerPass : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         mainCamera = Camera.main.transform;
-        gameObject.SetActive(false);
+        if (scene.name != "Lobby")
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnEnable()
@@ -78,14 +83,26 @@ public class SummonStickerPass : MonoBehaviour
     //this controls the movement of the sticker pass. it follows your camera and always stays in front.
     void LateUpdate()
     {
-        Vector3 targetPosition = mainCamera.position + mainCamera.TransformDirection(offset);
-        Quaternion targetRotation = mainCamera.rotation;
+        if (SceneManager.GetActiveScene().name == "Lobby")
+        {
+            //todo
+            gameObject.SetActive(true);
+            //GameObject passholder = GameObject.FindGameObjectWithTag("PassHolder");
+            //transform.position = passholder.transform.position + holderoffset;
+            transform.position = holderoffset;
+            transform.rotation = holderrotation;
+        }
+        else
+        {
+            Vector3 targetPosition = mainCamera.position + mainCamera.TransformDirection(offset);
+            Quaternion targetRotation = mainCamera.rotation;
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position, targetPosition, ref velocity, positionSmoothTime);
+            transform.position = Vector3.SmoothDamp(
+                transform.position, targetPosition, ref velocity, positionSmoothTime);
 
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation, targetRotation, rotationSmoothSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation, targetRotation, rotationSmoothSpeed * Time.deltaTime);
+        }
     }
 
     //activates when a new scene is loaded.
