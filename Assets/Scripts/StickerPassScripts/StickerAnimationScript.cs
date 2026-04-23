@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StickerAnimationScript : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class StickerAnimationScript : MonoBehaviour
     {
         mAnimator = GetComponent<Animator>();
         ParticleSystem = GetComponent<ParticleSystem>();
-        StartCoroutine(PlayAnimationAndParticles());
+    }
+
+    public void GiveSticker(string nextscene, bool changescene)
+    {
+        StartCoroutine(PlayAnimationAndParticles(nextscene, changescene));
     }
 
     public void GetSticker()
@@ -24,7 +29,12 @@ public class StickerAnimationScript : MonoBehaviour
         ParticleSystem.Play();
     }
 
-    IEnumerator PlayAnimationAndParticles()
+    public void PlaySound()
+    {
+        GameObject.FindGameObjectWithTag("stickerPass").GetComponent<AudioSource>().Play();
+    }
+
+    IEnumerator PlayAnimationAndParticles(string nextscene, bool changescene)
     {
         Debug.Log("Playing sticker animation");
         yield return new WaitForSeconds(1);
@@ -32,6 +42,12 @@ public class StickerAnimationScript : MonoBehaviour
         Debug.Log("middle animation");
         yield return new WaitForSeconds(2);
         DoParticles();
+        PlaySound();
         Debug.Log("End animation");
+        yield return new WaitForSeconds(2);
+        if (changescene)
+        {
+            SceneManager.LoadScene(nextscene);
+        }
     }
 }

@@ -52,7 +52,7 @@ public class SummonStickerPass : MonoBehaviour
                     gameObject.GetComponent<StickerGiver>().GiveSticker("HallwaySticker"); break;
                 case "cannulation_room":
                     gameObject.GetComponent<StickerGiver>().GiveSticker("CannulationSticker"); break;
-                case "MRI_Room3":
+                case "MRI_Room1":
                     gameObject.GetComponent<StickerGiver>().GiveSticker("BeforeMRISticker"); break;
                 case "MRI_Room6":
                     gameObject.GetComponent<StickerGiver>().GiveSticker("AfterMRISticker"); break;
@@ -61,7 +61,7 @@ public class SummonStickerPass : MonoBehaviour
                 case "MRI_Room2":
                     gameObject.GetComponent<StickerGiver>().GiveSticker("QNASticker"); break;
                 case "Quiz":
-                    gameObject.GetComponent<StickerGiver>().GiveSticker("hallwaySticker"); break;
+                    gameObject.GetComponent<StickerGiver>().GiveSticker("QuizSticker"); break;
 
                 default:
                     Debug.Log("Incorrect scene name");
@@ -85,8 +85,6 @@ public class SummonStickerPass : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Lobby")
         {
-            //todo
-            gameObject.SetActive(true);
             //GameObject passholder = GameObject.FindGameObjectWithTag("PassHolder");
             //transform.position = passholder.transform.position + holderoffset;
             transform.position = holderoffset;
