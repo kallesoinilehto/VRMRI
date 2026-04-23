@@ -54,7 +54,7 @@ public class StickerGiver : MonoBehaviour
 
             case "QuizSticker":
                 quizSticker.SetActive(true);
-                quizSticker.GetComponent<StickerAnimationScript>().GiveSticker("Lobby", false);
+                quizSticker.GetComponent<StickerAnimationScript>().GiveSticker("Lobby", true);
                 break;
 
 

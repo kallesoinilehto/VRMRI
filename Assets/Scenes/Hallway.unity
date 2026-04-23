@@ -32969,6 +32969,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460363817641230611, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: MRI_Room_Sorting_Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 614908601596599829, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: MRI_Room3
+      objectReference: {fileID: 0}
+    - target: {fileID: 819741358916533006, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: m_text
+      value: Haluatko pelata tietovisaa?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458733578707724770, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: MRI_Room2
+      objectReference: {fileID: 0}
     - target: {fileID: 1680452501524692654, guid: d1d543bf61818ca4fad039dc6496c41a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33024,10 +33044,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1031965164}
+    - target: {fileID: 4445521400433505113, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: Hallway 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4793190518777103363, guid: d1d543bf61818ca4fad039dc6496c41a,
         type: 3}
       propertyPath: m_Name
       value: Sticker pass V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016103481589670292, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: Quiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548399958383705788, guid: d1d543bf61818ca4fad039dc6496c41a,
+        type: 3}
+      propertyPath: NextScene
+      value: cannulation_room
       objectReference: {fileID: 0}
     - target: {fileID: 7710265897246049860, guid: d1d543bf61818ca4fad039dc6496c41a,
         type: 3}
