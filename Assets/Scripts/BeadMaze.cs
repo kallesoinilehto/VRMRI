@@ -17,8 +17,17 @@ public class BeadMaze : MonoBehaviour
         
         if (other.gameObject.tag == "bead")
         {
-            feedbackLight.color = Color.red;
-            Debug.Log("Collision");
+            StartCoroutine(LightOffWithDelay(1f));
         }
+    }
+
+    IEnumerator LightOffWithDelay(float delay)
+    {
+        feedbackLight.color = Color.red;
+        Debug.Log("Collision");
+
+        yield return new WaitForSeconds(delay);
+
+        feedbackLight.enabled = false;
     }
 }
