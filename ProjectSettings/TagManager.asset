@@ -31,7 +31,7 @@ TagManager:
   - passReference
   - FallZone
   - Floor
-  - PassHolder
+  - bead
   layers:
   - Default
   - TransparentFX
