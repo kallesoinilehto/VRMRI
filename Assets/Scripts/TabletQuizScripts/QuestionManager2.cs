@@ -154,6 +154,7 @@ public class QuestionManager2 : MonoBehaviour
             timer--;
         }
 
-        SceneManager.LoadScene(returnSceneName);
+        GameObject.FindGameObjectWithTag("passReference").GetComponent<ReferencePass>().GetPass().SetActive(true);
+        //SceneManager.LoadScene(returnSceneName);
     }
 }
