@@ -8,6 +8,7 @@ public class RespawnOnFall : MonoBehaviour
     private Rigidbody rb;
     private bool isRespawning = false;
 
+    // tallennetaan objektin sijainti ja rotaatio alussa
     void Start()
     {
         startPosition = transform.position;
@@ -15,6 +16,7 @@ public class RespawnOnFall : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    // Jätin tähän OnTriggerEnter()-metodin siltä varalta, että lobbyn FallZone otetaan käyttöön
     /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FallZone"))
@@ -23,6 +25,7 @@ public class RespawnOnFall : MonoBehaviour
         }
     }*/
 
+    // jos objekti, johon tämä script on linkitetty törmää lattiaan (jolla on "Floor" tag), kutsutaan RespawnWithDelay-korutiinia
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor") && !isRespawning)
@@ -35,8 +38,10 @@ public class RespawnOnFall : MonoBehaviour
     {
         isRespawning = true;
 
+        // viive ennen respawnia
         yield return new WaitForSeconds(delay);
 
+        // kutsutaan Respawn()-metodia
         Respawn();
 
         isRespawning = false;
@@ -44,9 +49,11 @@ public class RespawnOnFall : MonoBehaviour
 
     void Respawn()
     {
+        // varmistetaan, että objekti pysyy paikallaan respawnissa
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
+        // nykyinen sijainti muutetaan alun sijainniksi
         transform.position = startPosition;
         transform.rotation = startRotation;
     }
